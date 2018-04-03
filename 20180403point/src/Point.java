@@ -1,9 +1,15 @@
 
 public class Point {
 	
-	public double x; //필드의 유효 범위 : 클라스 전체, 지역변수의 유효범위 : 메소드 내부
-	public double y; // public/private + 자료형 + 변수
+	private double x; //필드의 유효 범위 : 클라스 전체, 지역변수의 유효범위 : 메소드 내부
+	private double y; // public/private + 자료형 + 변수
 	
+	public void setX(double xx) {
+		this.x=xx;
+	}
+	public void setY(double yy) {
+		this.y=yy;
+	}
 	public double distance() {
 		//반환할 변수 선언
 		double result;
@@ -14,9 +20,9 @@ public class Point {
 		//거리 반환
 		return result;
 	}
-	
-	public Point move(Point p) {
 		
+	public Point move(Point p) {
+	
 		//temp 변수 선언
 		double a, b;
 		
